@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Doweco</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main_parent {
+            width: 100vw;
+            height: auto;
+        }
+
+        .header_1sec {
+            z-index: 900;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            width: 100%;
+            height: 8vh;
+        }
+
+        .menu {
+            font-size: x-large;
+            margin-left: .8rem;
+        }
+
+        .half_brand_name1 {
+            font-size: x-large;
+            font-weight: 700;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .half_brand_name2 {
+            color: red;
+            font-size: x-large;
+            font-weight: 700;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .brand_name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .shopping_icon {
+            font-size: x-large;
+
+            margin-right: .8rem;
+
+
+        }
+
+        .slider {
+            width: 100vw;
+            height: 60vh;
+            background-color: lightcoral;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        /* img {
+    height: 60vh;
+    width: 100vw;
+    margin-top: 2rem;
+    justify-content: center;
+
+
+
+
+  } */
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 100vw;
+            margin-top: 2rem;
+
+            position: relative;
+            display: flex;
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* margin: auto; */
+        }
+
+        .img_slider {
+            width: 100vw;
+            height: 80vh;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: black;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            /* bottom: 1px; */
+            width: 100%;
+            text-align: center;
+        }
+
+        .text img {
+            width: 10vw;
+            height: 10vh;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: black;
+            margin-top: 2rem;
+            font-size: xx-large;
+            padding: 8px 12px;
+            position: absolute;
+            display: inline;
+            align-items: center;
+            top: 2rem;
+            left: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .title_product {
+            width: 100vw;
+            height: 10vh;
+            background-color: lightpink;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: x-large;
+            font-weight: 700;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .product_photo {
+            width: 100vw;
+            height: 40vh;
+
+        }
+
+        .product_photo1 {
+            display: flex;
+            justify-content: space-between;
+            width: 100vw;
+            /* height: 30vh; */
+
+
+        }
+
+        .product_photo2 {
+            display: flex;
+            justify-content: space-around;
+            width: 100vw;
+            /* height: 30vh; */
+
+
+        }
+
+        .sec3_img {
+            margin-left: .8rem;
+            width: 20vw;
+            height: 40vh;
+            border-radius: 10rem;
+        }
+
+        .photo:hover {
+            border-color: black;
+        }
+
+        .shopping_class {
+            display: flex;
+            width: 100vw;
+            /* height: 80vh; */
+        }
+
+        .cane_arm_photo_class {
+            width: 40vw;
+
+            position: relative;
+            color: white;
+
+
+        }
+
+        .cane_arm_photo_img {
+            height: 80vh;
+
+
+        }
+
+
+        .cane_arm_paragraph1 {
+            position: absolute;
+            bottom: 175px;
+            left: 55px;
+            font-size: xx-large;
+
+            font-weight: 800;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+        }
+
+        .cane_arm_paragraph2 {
+            position: absolute;
+            bottom: 125px;
+            left: 55px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+        }
+
+        .cane_arm_shop_button {
+            position: absolute;
+            color: white;
+            left: 55px;
+            bottom: 60px;
+            width: 8vw;
+            height: 6vh;
+            background-color: transparent;
+            text-decoration: none;
+            border: 1px solid white;
+        }
+
+        .sculptural_photo_class {
+            width: 30vw;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: black;
+
+        }
+
+        .sculptural_photo_img {
+            height: 80vh;
+
+
+        }
+
+        .sculptura_paragraphl {
+            position: absolute;
+            bottom: 160px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+
+
+        }
+
+        .sculptura_paragraph2 {
+            position: absolute;
+            font-weight: 800;
+            bottom: 110px;
+            font-size: x-large;
+
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+
+        }
+
+        .sculptural_shop_button {
+            position: absolute;
+            color: black;
+            bottom: 50px;
+            width: 8vw;
+            height: 6vh;
+            background-color: transparent;
+            text-decoration: none;
+            border: 1px solid black;
+
+        }
+
+        .button1:hover {
+            background-color: red;
+        }
+
+        .button2:hover {
+            background-color: red;
+        }
+
+        .button3:hover {
+            background-color: red;
+
+
+
+        }
+
+
+        .sofa_photo_class {
+            width: 30vw;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            color: black;
+        }
+
+        .sofa_photo_img {
+            width: 30vw;
+            height: 80vh;
+
+
+
+        }
+
+        .sofa_paragraphl {
+            position: absolute;
+            font-weight: 800;
+            bottom: 400px;
+            left: 40px;
+            font-size: x-large;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .sofa_paragraph2 {
+            position: absolute;
+            font-weight: 800;
+            bottom: 365px;
+            left: 40px;
+            font-size: x-large;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .sofa_shop_button {
+            position: absolute;
+            color: black;
+            font-size: xx-large;
+            bottom: 310px;
+            left: 40px;
+            background-color: transparent;
+            text-decoration: none;
+            border-radius: 1rem;
+
+        }
+
+        .shop_c {
+            text-decoration: none;
+            color: white;
+        }
+
+        .shop_sc {
+            text-decoration: none;
+            color: black;
+        }
+
+        .shop_sofa {
+            text-decoration: none;
+            color: black;
+            font-size: xx-large;
+
+        }
+
+        .product_video {
+            width: 100vw;
+            height: 60vh;
+            margin-top: 15px;
+            margin-bottom: 15px;
+
+        }
+
+
+        .video_photo_img {
+            position: relative;
+            width: 100vw;
+            height: 60vh;
+        }
+
+        .video_img {
+            position: relative;
+            width: 100vw;
+            height: 60vh;
+
+        }
+
+        .video_button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            font-size: xx-large;
+            color: black;
+            background-color: white;
+
+            border: 2px solid black;
+            border-radius: 10rem;
+            width: 4vw;
+            height: 9vh;
+            bottom: 8rem;
+            text-decoration: none;
+        }
+
+        .video {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .title_of_discover_product {
+            width: 100vw;
+            height: 10vh;
+            margin-top: 30px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: x-large;
+            font-weight: 700;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .product_discover {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+
+        }
+
+        .product_discover a {
+            color: black;
+            /* text-decoration: none; */
+
+        }
+
+        .show_our_product {
+            width: 100vw;
+            height: 50vh;
+            background-color: gray;
+        }
+
+        .advertisement {
+            display: flex;
+            width: 100vw;
+            height: 80vh;
+            margin-top: 15px;
+        }
+
+        .advertisement_photo img {
+            width: 50vw;
+            height: 80vh;
+
+        }
+
+        .shop_advertisement {
+            text-decoration: none;
+            color: black;
+            font-size: large;
+
+        }
+
+        .advertisement_describe_main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .advertisement_describe {
+            width: 50vw;
+            height: 80vh;
+            background-color: rgb(223, 223, 191);
+            color: black;
+
+        }
+
+        .advertisement_describe1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+
+            font-size: x-large;
+            font-weight: 700;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .advertisement_describe2 {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .advertisement_describe2 p {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+
+            width: 30vw;
+            margin-top: 20px;
+        }
+
+        .advertisement_button1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .advertisement_button {
+
+            color: white;
+            width: 8vw;
+            height: 6vh;
+            background-color: transparent;
+            text-decoration: none;
+            border: 2px solid black;
+            border-radius: 2rem;
+            margin-top: 60px;
+
+        }
+
+        .secondlast_sec {
+            width: 100vw;
+            height: 20vh;
+
+        }
+
+        .sec7_img {
+            margin: 2rem;
+            width: 10vw;
+            height: 10vh;
+
+        }
+
+        .our_contact {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            background-color: whitesmoke;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+        }
+
+        .left_side {
+            width: 50vw;
+            margin: 3rem;
+        }
+
+        .right_side {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            width: 50vw;
+        }
+
+        .left_side p {
+            margin-top: 1rem;
+        }
+
+        .right_side p {
+            margin-top: 1rem;
+        }
+
+        .subscribe_or_social_media {
+            margin-top: 3rem;
+        }
+
+        .subscribe_or_social_media p {
+            margin-bottom: 1rem;
+
+        }
+
+        .search_input_last {
+            display: block;
+            width: 30vw;
+            height: 8vh;
+            border: 1px solid black;
+            border-radius: 5rem;
+            background-color: white;
+            width: 30vw;
+            height: 8vh;
+            border-radius: 5rem;
+        }
+
+        .customer_care_sec {
+            margin-top: 3rem;
+
+
+        }
+
+        .socialmedia {
+            width: 30vw;
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-around;
+
+
+        }
+
+        .socialmedia a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            width: 3vw;
+            height: 6.8vh;
+            border-radius: 10rem;
+            text-decoration: none;
+        }
+
+        .last_sec {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100vw;
+            height: 15vh;
+            background-color: whitesmoke;
+            color: black;
+        }
+
+        .last_sec p {
+            margin-top: 10px;
+        }
+
+        .last_icon_sec {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100vw;
+            height: 10vh;
+            position: fixed;
+            z-index: 800;
+            bottom: 0;
+            background-color: white;
+            width: 100%;
+            height: 8vh;
+        }
+
+        .last_icon_sec a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+        .button2:hover {
+            background-color: red;
+        }
+
+        .margin {
+            height: 100vh;
+            width: 100vw;
+        }
+
+
+
+
+        @media screen and (max-width:900px) and (min-height:300px) {
+
+            .header_1sec {
+                z-index: 900;
+                margin: 0;
+                padding: 0;
+                position: fixed;
+                top: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: white;
+                width: 100vw;
+                height: 8vh;
+            }
+
+            .slider {
+                width: 100vw;
+                height: 40vh;
+                background-color: lightcoral;
+            }
+
+            .img_slider {
+                width: 100vw;
+                height: 40vh;
+            }
+            .numbertext {
+            color: black;
+            margin-top: 2rem;
+            font-size: x-large;
+            padding: 8px 12px;
+            position: absolute;
+            display: inline;
+            align-items: center;
+            width: 80vw;
+            top: 2rem;
+            left: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+
+            .product_photo {
+                width: 100vw;
+                height: 20vh;
+
+            }
+
+            .sec3_img {
+                margin-left: .8rem;
+                width: 25vw;
+                height: 20vh;
+                border-radius: 10rem;
+                background-color: lightgray;
+            }
+
+            .shopping_class {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+
+            }
+
+            .cane_arm_photo_class {
+                display: flex;
+                justify-content: center;
+                width: 100vw;
+            }
+
+
+            .cane_arm_photo_img {
+                width: 90vw;
+                height: 30vh;
+
+
+            }
+
+            .cane_arm_paragraph1 {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                width: 80vw;
+                font-size: x-large;
+                top: 9rem;
+                font-weight: 800;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+
+            .cane_arm_paragraph2 {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                top: 11rem;
+                width: 90vw;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: smaller;
+            }
+
+            .cane_arm_shop_button {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                left: 3.5rem;
+                bottom: .5rem;
+                width: 25vw;
+                height: 3vh;
+                background-color: transparent;
+                text-decoration: none;
+                border: 1px solid white;
+
+            }
+
+
+            .sculptural_photo {
+                display: flex;
+                justify-content: center;
+                margin-top: 15px;
+                margin-bottom: 15px;
+
+            }
+
+            .sculptural_photo_class {
+                width: 90vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .sculptural_photo_img {
+                width: 90vw;
+                height: 35vh;
+
+            }
+
+            .sculptura_paragraphl {
+                position: absolute;
+                bottom: 7rem;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+
+            .sculptura_paragraph2 {
+                position: absolute;
+                font-weight: 800;
+                bottom: 4rem;
+                font-size: x-large;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+
+            .sculptural_shop_button {
+                position: absolute;
+                color: black;
+                bottom: 1rem;
+                width: 25vw;
+                height: 3vh;
+                background-color: transparent;
+                text-decoration: none;
+                border: 1px solid black;
+
+            }
+
+            .sofa_photo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100vw;
+            }
+
+            .sofa_photo_class {
+                width: 90vw;
+            }
+
+            .sofa_photo_img {
+                width: 90vw;
+                height: 35vh;
+            }
+
+            .sofa_paragraphl {
+                position: absolute;
+                width: 90vw;
+
+                font-weight: 800;
+                bottom: 15rem;
+                left: 40px;
+                font-size: x-large;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+            }
+
+            .sofa_paragraph2 {
+                position: absolute;
+                width: 90vw;
+                font-weight: 800;
+                bottom: 13rem;
+                left: 40px;
+                font-size: x-large;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+            }
+
+            .sofa_shop_button {
+                position: absolute;
+                color: black;
+                font-size: xx-large;
+                bottom: 10rem;
+                left: 40px;
+                background-color: transparent;
+                text-decoration: none;
+                border-radius: 1rem;
+
+            }
+
+            .product_video {
+                width: 100vw;
+                height: 30vh;
+
+            }
+
+
+            .video_photo_img {
+                width: 100vw;
+                height: 30vh;
+
+            }
+
+            .video_button {
+
+                width: 12vw;
+                height: 6vh;
+                bottom: 6rem;
+                text-decoration: none;
+            }
+
+
+            .button1:hover {
+                background-color: red;
+
+
+            }
+
+            .button2:hover {
+                background-color: red;
+
+
+            }
+
+            .product_video {
+                width: 100vw;
+                height: 30vh;
+            }
+
+            .video_img {
+                width: 100vw;
+                height: 30vh;
+
+            }
+
+            .show_our_product {
+                width: 100vw;
+                height: 40vh;
+            }
+
+            .advertisement {
+                display: block;
+                width: 100vw;
+                height: 80vh;
+            }
+
+            .advertisement_photo {
+                display: flex;
+                justify-content: center;
+
+            }
+
+            .advertisement_photo img {
+                width: 90vw;
+                height: 40vh;
+            }
+
+            .advertisement_describe_main {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .advertisement_describe {
+                width: 90vw;
+                height: 40vh;
+
+
+            }
+
+            .advertisement_button {
+                width: 25vw;
+                height: 4vh;
+
+            }
+
+            .advertisement_describe1 {
+                margin: 0;
+                padding: 20px;
+
+
+            }
+
+            .advertisement_describe2 {
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+
+            .advertisement_describe2 p {
+                width: 80vw;
+
+            }
+
+            .sec7_img {
+                margin: 2rem;
+                width: 15vw;
+                height: 7vh;
+            }
+
+            .secondlast_sec {
+                width: 100vw;
+                height: 10vh;
+
+            }
+
+            .our_contact {
+                display: block;
+                width: 100vw;
+                height: 120vh;
+            }
+
+            .left_side {
+                width: 50vw;
+                padding-top: 3rem;
+            }
+
+            .right_side {
+                margin-top: 3rem;
+                margin-bottom: 3rem;
+                margin-left: 3rem;
+                width: 50vw;
+            }
+
+            .search_input_last {
+                display: block;
+                width: 75vw;
+                height: 4vh;
+            }
+
+            .last_sec {
+                width: 100vw;
+                height: 10vh;
+            }
+
+            .last_icon_sec {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100vw;
+                height: 10vh;
+                position: fixed;
+                z-index: 800;
+                bottom: 0;
+                background-color: white;
+                width: 100%;
+                height: 8vh;
+            }
+
+            .socialmedia {
+                width: 70vw;
+            }
+
+            .socialmedia a {
+                width: 7vw;
+                height: 3.3vh;
+                text-decoration: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_parent">
+        <header>
+            <div class="header_1sec">
+                <div class="menu">
+                    <i class="fa-solid fa-bars"></i>
+
+                </div>
+                <div class="brand_name">
+                    <h4 class="half_brand_name1">Dowec</h4>
+                    <h4 class="half_brand_name2">o.</h4>
+                </div>
+                <div class="shopping_icon">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+
+
+                </div>
+            </div>
+
+        </header>
+        <section>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">
+                        <p>
+                            Interior Decoration
+                        </p>
+                        <p>
+                            For Your Home
+                        </p>
+
+                    </div>
+                    <img class="img_slider" src="blog_1.jpg">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">
+                        <p>
+                            Minimalist
+                        </p>
+                        <p>
+                            Interior Design
+                        </p>
+
+                    </div>
+                    <img class="img_slider" src="blog_2.jpg">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">
+                        <p>
+                            Some Furniture
+
+                        </p>
+                        <p>
+                            Vocabulary
+
+                        </p>
+
+                    </div>
+                    <img class="img_slider" src="blog_3.jpg">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            <br>
+
+
+
+
+
+        </section>
+        <section>
+            <div class="product_shoe_3sec">
+
+                <div class="title_product">
+                    Shop By Category
+                </div>
+
+                <div class="product_photo">
+
+                    <div class="product_photo1 ">
+                        <marquee behavior="scroll" scrollamount="5" width="100%"  direction="left"
+                            loop="infinite">
+                            <img class="sec3_img sec3_i" src="bathroom.jpg" alt="">
+                            <img class="sec3_img sec3_i" src="bed.jpg" alt="">
+                            <img class="sec3_img sec3_i" src="furniture.jpg" alt="">
+                            <img class="sec3_img sec3_i" src="decor.jpg" alt="">
+                            <img class="sec3_img sec3_i" src="kitchen.jpg" alt="">
+                            <img class="sec3_img sec3_i" src="lighting.jpg" alt="">
+                            <img class="sec3_img sec3_i" src="outdoor.jpg" alt="">
+                            <img class="sec3_img sec3_i" src="table.jpg" alt="">
+                        </marquee>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+
+        </section>
+        <section>
+            <div class="shopping_class">
+                <div class="cane_arm_photo">
+
+                    <div class="cane_arm_photo_class">
+                        <img class="cane_arm_photo_img" src="cane arms chair.jpg" alt="">
+
+                        <div class="cane_arm_paragraph1">
+                            Cane Arms Chair
+                        </div>
+
+                        <div class="cane_arm_paragraph2">
+                            Kiln-dried solid wood frame is extra durable.
+                        </div>
+                        <button type="button" class="cane_arm_shop_button button1"> <a class="shop_c"
+                                href="advertisement.html">Shop Now</a></button>
+                    </div>
+                </div>
+                <div class="sculptural_photo">
+                    <div class="sculptural_photo_class">
+                        <img class="sculptural_photo_img" src="sculptural pendant.jpg" alt="">
+
+                        <div class="sculptura_paragraphl">
+                            Limited Time Offer
+                        </div>
+
+                        <div class="sculptura_paragraph2">
+                            Sculptural Pendant
+                        </div>
+                        <button type="button" class="sculptural_shop_button button2"> <a class="shop_sc"
+                                href="advertisement.html">Shop Now</a></button>
+
+
+
+                    </div>
+                </div>
+                <div class="sofa_photo">
+
+                    <div class="sofa_photo_class">
+                        <img class="sofa_photo_img" src="banner1-3.jpg" alt="">
+
+                        <div class="sofa_paragraphl">
+                            30% Off Bonus Deal
+                        </div>
+
+                        <div class="sofa_paragraph2">
+                            Outdoor Pouf
+                        </div>
+
+                        <a class="sofa_shop_button" href="advertisement.html">
+                            <i id="arrow_icon" class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="product_video">
+
+                <div class="video_img">
+                    <img class="video_photo_img" src="video1.jpg" alt="image">
+
+                    <div class="video">
+                        <a class="video_button" href="https://youtu.be/kTj8UoSKAl0?si=xWpG8va_VYkTRaNe">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+        <section>
+            <div class="discover_our_product">
+
+                <div class="title_of_discover_product">
+                    Discover New Product
+
+                </div>
+                <div class="product_discover">
+                    <a href="our_all_product.html">view all</a>
+
+                </div>
+                <div class="show_our_product">
+                    <a href=""><img src="" alt=""></a>
+                </div>
+
+
+
+            </div>
+
+        </section>
+        <section>
+            <div class="advertisement">
+
+                <div class="advertisement_photo">
+                    <img src="advertisement.jpg" alt="">
+                </div>
+
+                <div class="advertisement_describe_main">
+
+                    <div class="advertisement_describe">
+
+                        <div class="advertisement_describe1">
+                            Lilia Storage Sofa
+                        </div>
+
+                        <div class="advertisement_describe2">
+                            <p>As part of our White Glove Service,this
+                                piece will be </p>
+                            <p>
+                                brought
+                            </p>
+                            <p>into your home,placed in the room of your
+                                choice ,fully...</p>
+                        </div>
+
+
+                        <div class="advertisement_button1">
+                            <button type="button" class="advertisement_button button3">
+                                <a class="shop_advertisement" href="advertisement.html">
+                                    Shop Now </a></button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <section>
+            <div class="secondlast_sec">
+                <marquee behavior="scroll" scrollamount="5" width="100%" height="100px" direction="left"
+                    loop="infinite">
+                    <img class="sec7_img" src="brand-1.png" alt="">
+                    <img class="sec7_img" src="brand-2.png" alt="">
+                    <img class="sec7_img" src="brand-3.png" alt="">
+                    <img class="sec7_img" src="brand-4.png" alt="">
+                    <img class="sec7_img" src="brand-5.png" alt="">
+                </marquee>
+
+            </div>
+        </section>
+        <div class="our_contact">
+            <div class="left_side">
+                <div class="about_us_sec">
+                    <h3>About Us</h3>
+                    <p>Our shops</p>
+                    <p>Contact</p>
+                    <p>Artists</p>
+                    <p>Local Giving</p>
+                    <p>Press</p>
+
+                </div>
+                <div class="customer_care_sec">
+                    <h3>Customer Care</h3>
+                    <p>FAQs</p>
+                    <p>Store Locator</p>
+                    <p>Returns</p>
+                    <p>Shipping information</p>
+                    <p>Wholeshale</p>
+
+                </div>
+
+            </div>
+            <div class="right_side">
+                <div class="help_sec">
+                    <h3>Get Helps</h3>
+                    <p>Delivery information</p>
+                    <p>Terms & Condition</p>
+                    <p>Returns & Refunds</p>
+                    <p>Privacy Notice</p>
+                    <p>Shopping FAQs</p>
+
+                </div>
+                <div class="subscribe_or_social_media">
+                    <h3>Subscribe To Our Newletter!</h3>
+                    <p>Don't miss the latest news on brand and products...!</p>
+                    <input class="search_input_last" type="search" placeholder="    Your email...">
+
+                    <div class="socialmedia">
+                        <a href="https://www.instagram.com/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/login.php/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <hr>
+        <div class="last_sec">
+            <p>Copyright @ 2024. All Right Reserved</p>
+        </div>
+        <section>
+            <div class="last_icon_sec">
+                <div class="shop">
+                    <a href="index.html"> <i class="fa-solid fa-shop"></i></a>
+
+                </div>
+                <div class="Account">
+                    <a href="">
+                        <i class="fa-solid fa-user"></i>
+
+
+                    </a>
+
+
+                </div>
+                <div class="search">
+                    <a href="">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+
+
+                    </a>
+
+                </div>
+                <div class="wishlist ">
+                    <a href="">
+                        <i class="fa-regular fa-heart "></i>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+</body>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+
+
+</html>

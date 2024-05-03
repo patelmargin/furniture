@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>advertisement</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main_parent {
+            width: 100vw;
+            height: auto;
+        }
+
+        .header_1sec {
+            z-index: 900;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            width: 100%;
+            height: 8vh;
+        }
+
+        .menu {
+            font-size: x-large;
+            margin-left: .8rem;
+        }
+
+        .half_brand_name1 {
+            font-size: x-large;
+            font-weight: 700;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .half_brand_name2 {
+            color: red;
+            font-size: x-large;
+            font-weight: 700;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .brand_name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50vw;
+            height: 10vh;
+
+        }
+
+        .shopping_icon {
+            font-size: x-large;
+            margin-right: .8rem;
+
+
+        }
+
+        .shop_under {
+            width: 100vw;
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: whitesmoke;
+            color: black;
+            font-weight: 400;
+            margin-top: 1.2rem;
+
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+        }
+
+        .head_shop {
+            display: block;
+        }
+
+        .shop_paragraph a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+        }
+
+        .shop_paragraph {
+            display: flex;
+            justify-content: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .product_photo {
+            width: 100vw;
+            height: 40vh;
+
+        }
+
+        .product_photo1 {
+            display: flex;
+            justify-content: space-between;
+            width: 100vw;
+
+
+        }
+
+        .sec3_img {
+            margin-left: .8rem;
+            width: 20vw;
+            height: 40vh;
+            border-radius: 10rem;
+        }
+
+        .first_division {
+            width: 100vw;
+            height: 75vh;
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        .second_division {
+            width: 100vw;
+            height: 75vh;
+            display: flex;
+            justify-content: space-evenly;
+
+
+        }
+
+        .third_division {
+            width: 100vw;
+            height: 75vh;
+            display: flex;
+            justify-content: space-evenly;
+
+
+        }
+        .four_division{
+            width: 67vw;
+            height: 75vh;
+            display: flex;
+            justify-content: space-evenly;
+
+
+        }
+        .first_product img {
+            margin-top: 1rem;
+
+            height: 60vh;
+            width: 31vw;
+        }
+
+
+
+        .second_product img {
+            margin-top: 1rem;
+
+            height: 60vh;
+            width: 31vw;
+        }
+
+        .first_product {
+            position: relative;
+        }
+
+        .second_product {
+            position: relative;
+        }
+
+        .third_product {
+            position: relative;
+        }
+
+        .third_product img {
+            margin-top: 1rem;
+
+            height: 60vh;
+            width: 31vw;
+        }
+
+        .product_detail {
+            margin-top: 0.5rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+        }
+
+        .product_detail h1 {
+            color: black;
+            font-size: large;
+
+
+        }
+
+        .product_detail p {
+            bottom: 30rem;
+            color: red;
+        }
+
+        .discount {
+            display: flex;
+            justify-content: flex-end;
+
+
+        }
+
+        .any_note {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+
+        .any_note p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 24rem;
+            margin-left: 15px;
+            width: 3rem;
+            height: 1.5rem;
+            background-color: orange;
+            color: white;
+
+        }
+
+        .discount p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 24rem;
+            margin-right: 15px;
+            width: 3rem;
+            height: 1.5rem;
+            background-color: red;
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .last_sec {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100vw;
+            height: 15vh;
+            background-color: whitesmoke;
+            color: black;
+        }
+
+        .last_sec p {
+            margin-top: 10px;
+        }
+
+        .last_icon_sec {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100vw;
+            height: 10vh;
+            position: fixed;
+            z-index: 800;
+            bottom: 0;
+            background-color: white;
+            width: 100%;
+            height: 8vh;
+        }
+
+        .last_icon_sec a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .wish_list:hover {
+            background-color: red;
+        }
+        
+        .our_contact {
+            display: flex;
+            width: 100vw;
+            /* height: 100vh; */
+            background-color: whitesmoke;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+        }
+
+        .left_side {
+            width: 50vw;
+            margin: 3rem;
+        }
+
+        .right_side {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            margin-left: 3rem;
+
+            width: 50vw;
+        }
+
+        .left_side p {
+            margin-top: 1rem;
+        }
+
+        .right_side p {
+            margin-top: 1rem;
+        }
+        .help_sec{
+            margin-top: 3rem;
+
+
+        }
+
+        .subscribe_or_social_media {
+            margin-top: 3rem;
+        }
+
+        .subscribe_or_social_media p {
+            margin-bottom: 1rem;
+
+        }
+
+        .search_input_last {
+            display: block;
+            width: 30vw;
+            height: 8vh;
+            border: 1px solid black;
+            border-radius: 5rem;
+            background-color: white;
+            width: 30vw;
+            height: 8vh;
+            border-radius: 5rem;
+        }
+
+        .customer_care_sec {
+            margin-top: 3rem;
+
+
+        }
+
+        .socialmedia {
+            width: 15vw;
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-around;
+
+
+        }
+
+        .socialmedia a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2vw;
+            height: 4.5vh;
+            border-radius: 10rem;
+            text-decoration: none;
+        }
+
+        .header_last_sec {
+            display: flex;
+            justify-content: space-around;
+            width: 100vw;
+            height: 20vh;
+        }
+
+        ._copyright {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+            width: 50vw;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+        @media screen and (max-width:900px) and (max-height:1000px) {
+            .header_1sec {
+                z-index: 900;
+                margin: 0;
+                padding: 0;
+                position: fixed;
+                top: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: white;
+                width: 100vw;
+                height: 8vh;
+            }
+            .shop_under{
+                width: 100vw;
+                height: 20vh;
+            }
+            .head_shop{
+                margin-top: 3rem;
+            }
+            .shop_paragraph{
+                margin-top: 3rem;
+            }
+
+        .sec3_img {
+                margin-left: .8rem;
+                width: 25vw;
+                height: 20vh;
+                border-radius: 10rem;
+                background-color: lightgray;
+            }
+            .product_photo {
+                width: 100vw;
+                height: 20vh;
+
+            }
+            .first_division {
+            width: 100vw;
+            height: 35vh;
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        .second_division {
+            width: 100vw;
+            height: 35vh;
+            display: flex;
+            justify-content: space-evenly;
+
+
+        }
+
+        .third_division {
+            width: 100vw;
+            height: 35vh;
+            display: flex;
+            justify-content: space-evenly;
+
+
+        }
+        .four_division{
+            width: 67vw;
+            height: 35vh;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .first_product {
+            width: 31vw;
+
+        }
+
+        .second_product {
+            width: 31vw;
+
+        }
+
+        .third_product {
+            width: 31vw;
+
+        }
+        .first_product img {
+            margin-top: 1rem;
+            height: 25vh;
+            width: 31vw;
+        }
+
+
+        .second_product img {
+            margin-top: 1rem;
+            height: 25vh;
+            width: 31vw;
+        }
+        .third_product img {
+            margin-top: 1rem;
+            height: 25vh;
+            width: 31vw;
+        }
+        .any_note p {
+            position: absolute;
+            bottom: 14.5rem;
+            width: 3rem;
+            height: 1.5rem;
+
+        }
+
+        .discount p {
+            position: absolute;
+            bottom: 14.5rem;
+            width: 3rem;
+            height: 1.5rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+        .our_contact {
+                display: block;
+                width: 100vw;
+                height: 130vh;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+            }
+
+            .left_side {
+                width: 50vw;
+            }
+
+            .right_side {
+                margin-top: 3rem;
+                margin-bottom: 3rem;
+                margin-left: 3rem;
+                padding-top: 3rem;
+                width: 50vw;
+            }
+           
+
+            .socialmedia {
+                width: 60vw;
+            }
+
+            .socialmedia a {
+                width: 7vw;
+                height: 3.3vh;
+                text-decoration: none;
+            }
+           .last_icon_sec {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100vw;
+                height: 10vh;
+                position: fixed;
+                z-index: 900;
+                bottom: 0;
+                background-color: white;
+                width: 100%;
+                height: 8vh;
+            }
+
+
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_parent">
+        <header>
+            <div class="header_1sec">
+                <div class="menu">
+                    <i class="fa-solid fa-bars"></i>
+
+                </div>
+                <div class="brand_name">
+                    <h4 class="half_brand_name1">Dowec</h4>
+                    <h4 class="half_brand_name2">o.</h4>
+                </div>
+
+                <div class="shopping_icon">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+
+
+                </div>
+
+
+            </div>
+
+        </header>
+        <section>
+            <div class="shop_under">
+                <div class="head_shop">
+                    <h1>Shop</h1>
+                </div>
+
+                <div class="shop_paragraph">
+                    <a href="index.html">
+                        <p>Home > </p>
+                    </a>
+                    <a href="advertisement.html">
+                        <p>Shop</p>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+        <div class="product_photo">
+
+            <div class="product_photo1 ">
+                <marquee behavior="scroll" scrollamount="5" width="100%" direction="left"
+                    loop="infinite">
+                    <img class="sec3_img photo" src="bathroom.jpg" alt="">
+                    <img class="sec3_img sec3_i" src="bed.jpg" alt="">
+                    <img class="sec3_img sec3_i" src="furniture.jpg" alt="">
+                    <img class="sec3_img sec3_i" src="decor.jpg" alt="">
+                    <img class="sec3_img sec3_i" src="kitchen.jpg" alt="">
+                    <img class="sec3_img sec3_i" src="lighting.jpg" alt="">
+                    <img class="sec3_img sec3_i" src="outdoor.jpg" alt="">
+                    <img class="sec3_img sec3_i" src="table.jpg" alt="">
+                </marquee>
+            </div>
+        </div>
+        <hr>
+        <section>
+            <div class="shopping_product">
+
+                <div class="first_division">
+                    <div class="first_product">
+                        <a href="chair_shop.html"><img src="chair_shop1.jpg" alt=""></a>
+
+                        <div class="product_detail">
+                            <h1>Benson chair</h1>
+                            <p>250.00$</p>
+                        </div>
+
+                    </div>
+                    <div class="second_product">
+                        <a href="aluminium.html"><img  src="al table1.jpg" alt=""></a>
+
+
+
+
+                        <div class="product_detail">
+                            <h1>Aluminium Table</h1>
+                            <p>25.00$</p>
+                        </div>
+
+                    </div>
+                    <div class="third_product">
+                        <a href="office_desk.html"><img src="office desk.jpg" alt=""></a>
+                        <div class="product_detail">
+                            <h1>Beech Office Desk</h1>
+                            <p>200.00$</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="second_division">
+
+                    <div class="first_product">
+                        <a href="clock_shop.html"><img src="clock1.jpg" alt=""></a>
+                       
+                        <div class="product_detail">
+                            <h1>Concrete clock</h1>
+                            <p>100.00$</p>
+
+                        </div>
+                    </div>
+                    <div class="second_product">
+                        <a href="bed_shop.html"><img src="bed3.jpg" alt=""></a>
+                       
+                        <div class="product_detail">
+                            <h1>Fabric Bed</h1>
+                            <p>200.00$</p>
+
+                        </div>
+                    </div>
+                    <div class="third_product">
+                        <a href="kitchen_realated.html"><img src="mini kitchen1.jpg" alt=""></a>
+
+                        <div class="product_detail">
+                            <h1>Hideaway Mini Kitchen</h1>
+                            <p>110.00$</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="third_division">
+                    <div class="first_product">
+                        <a href="drawer_shop.html"><img src="drawer1.jpg" alt=""></a>
+
+                        <div class="product_detail">
+                            <h1>Desk With Drawers</h1>
+                            <p>40.00$</p>
+
+                        </div>
+                    </div>
+                    <div class="second_product">
+                        <a href="frame_shop.html"><img src="frame1.jpg" alt=""></a>
+
+                        <div class="product_detail">
+                            <h1>Frame-Eclisse</h1>
+                            <p>150.00$</p>
+
+                        </div>
+                    </div>
+
+                    <div class="third_product">
+                        <a href="steelcooker_shop.html"><img src="steel cooker1.jpg" alt=""></a>
+                        
+                        <div class="product_detail">
+                            <h1>Steel Cooker</h1>
+                            <p>120.00$</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="four_division">
+                    <div class="first_product">
+                        <a href="bathroom_material.html"><img src="bathroom_material1.jpg" alt=""></a>
+
+                        <div class="product_detail">
+                            <h1>Tesi Nero Seta</h1>
+                            <p>40.00$ - 60.00$</p>
+
+                        </div>
+                    </div>
+                    <div class="second_product">
+                        <a href="lamp.html"><img src="lamp1.jpg" alt=""></a>
+
+                        <div class="product_detail">
+                            <h1>Fabric Wall Lamp</h1>
+                           <p>25.00$</p>
+
+                        </div>
+                    </div>
+
+
+            </div>
+        </section>
+        <section>
+            <div class="our_contact">
+                
+                <div class="right_side">
+                    <div class="contact_us">
+                        <h3>Contact Us</h3>
+                        <p>Rains HQ , Jens Olsens Vej 13,8200</p>
+                        <p>Aarhus N, Denmark</p>
+                        <p>Email:dowecoshop@gmail.com</p>
+                        <p>Phone:(+84) 123 456 789</p>
+
+                        <div class="socialmedia">
+                            <a href="https://www.instagram.com/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/login.php/"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                        
+                        
+                    </div>
+                   
+                    <div class="help_sec">
+                        <h3>Get Helps</h3>
+                        <p>Delivery information</p>
+                        <p>Terms & Condition</p>
+                        <p>Returns & Refunds</p>
+                        <p>Privacy Notice</p>
+                        <p>Shopping FAQs</p>
+    
+                    </div>
+
+
+    
+                </div>
+                <div class="left_side">
+                    <div class="about_us_sec">
+                        <h3>About Us</h3>
+                        <p>Our shops</p>
+                        <p>Contact</p>
+                        <p>Artists</p>
+                        <p>Local Giving</p>
+                        <p>Press</p>
+    
+                    </div>
+                    <div class="customer_care_sec">
+                        <h3>Customer Care</h3>
+                        <p>FAQs</p>
+                        <p>Store Locator</p>
+                        <p>Returns</p>
+                        <p>Shipping information</p>
+                        <p>Wholeshale</p>
+    
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+        <div class="header_last_sec">
+
+
+            <div class="_copyright">
+                <p>Copyright @ 2024. All Right Reserved</p>
+            </div>
+            <div class="brand_name">
+                <h4 class="half_brand_name1">Dowec</h4>
+                <h4 class="half_brand_name2">o.</h4>
+            </div>
+        </div>
+
+        <section>
+            <div class="last_icon_sec">
+            <div class="shop">
+                <a href="index.html"> <i class="fa-solid fa-shop"></i></a>
+
+            </div>
+            <div class="Account">
+                <a href="">
+                    <i class="fa-solid fa-user"></i>
+
+
+                </a>
+
+
+            </div>
+            <div class="search">
+                <a href="">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+
+
+                </a>
+
+            </div>
+            <div class="wishlist ">
+                <a href="">
+                    <i class="fa-regular fa-heart "></i>
+                </a>
+
+            </div>
+        </div>
+        </section>
+    </div>
+</body>
+
+</html>

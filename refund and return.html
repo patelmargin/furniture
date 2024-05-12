@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>refund and return</title>
+    <style>
+        .header_1sec {
+            z-index: 900;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(252, 246, 246);
+            width: 100%;
+            height: 10vh;
+        }
+
+        .menu {
+            font-size: x-large;
+            margin-left: .8rem;
+        }
+
+        .half_brand_name1 {
+            font-size: x-large;
+            font-weight: 700;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .half_brand_name2 {
+            color: red;
+            font-size: x-large;
+            font-weight: 700;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .brand_name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .shopping_icon {
+            font-size: x-large;
+            margin-right: .8rem;
+        }
+
+        .header_2 {
+            display: flex;
+            margin-top: 2rem;
+            justify-content: center;
+            align-items: flex-end;
+            width: 100vw;
+            height: 25vh;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .shop_paragraph a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+        }
+
+        .shop_paragraph {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .main_section {
+            margin: 1rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+        .our_contact {
+          display: flex;
+          width: 100vw;
+          height: 100vh;
+          background-color: whitesmoke;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+      }
+
+      .left_side {
+          width: 50vw;
+          margin: 3rem;
+      }
+
+      .right_side {
+          margin-top: 3rem;
+          margin-bottom: 3rem;
+          margin-left: 3rem;
+
+          width: 50vw;
+      }
+
+      .left_side p {
+          margin-top: 1rem;
+      }
+
+      .right_side p {
+          margin-top: 1rem;
+      }
+      .help_sec{
+          margin-top: 3rem;
+
+
+      }
+
+      .subscribe_or_social_media {
+          margin-top: 3rem;
+      }
+
+      .subscribe_or_social_media p {
+          margin-bottom: 1rem;
+
+      }
+
+      .search_input_last {
+          display: block;
+          width: 30vw;
+          height: 8vh;
+          border: 1px solid black;
+          border-radius: 5rem;
+          background-color: white;
+          width: 30vw;
+          height: 8vh;
+          border-radius: 5rem;
+      }
+
+      .customer_care_sec {
+          margin-top: 3rem;
+
+
+      }
+
+      .socialmedia {
+          width: 15vw;
+          margin-top: 1rem;
+          display: flex;
+          justify-content: space-around;
+
+
+      }
+
+
+      .socialmedia a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 2vw;
+          height: 4.5vh;
+          border-radius: 10rem;
+          text-decoration: none;
+      }
+      .socialmedia_share a{
+        margin-left: 1rem;
+      }
+      .last_icon_sec {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          width: 100vw;
+          height: 10vh;
+          position: fixed;
+          z-index: 800;
+          bottom: 0;
+          background-color: white;
+          width: 100%;
+          height: 8vh;
+      }
+
+      .last_icon_sec a {
+          text-decoration: none;
+          color: black;
+      }
+      @media screen and (max-width:900px) and (min-height:300px) {
+        .header_2 {
+            display: flex;
+            margin-top: 2rem;
+            justify-content: center;
+            align-items: flex-end;
+            font-size:small;
+            width: 100vw;
+            height: 18vh;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+        .our_contact {
+              display: block;
+              width: 100vw;
+              height: 170vh;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+          }
+
+          .left_side {
+              width: 50vw;
+          }
+
+          .right_side {
+              margin-top: 3rem;
+              margin-bottom: 3rem;
+              margin-left: 3rem;
+              padding-top: 3rem;
+              width: 50vw;
+          }
+         
+
+          .socialmedia {
+              width: 60vw;
+          }
+
+          .socialmedia a {
+              width: 7vw;
+              height: 3.3vh;
+              text-decoration: none;
+          }
+
+
+
+
+
+
+
+
+
+
+      }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header_1sec">
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+
+            </div>
+            <div class="brand_name">
+                <h4 class="half_brand_name1">Dowec</h4>
+                <h4 class="half_brand_name2">o.</h4>
+            </div>
+            <div class="shopping_icon">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </div>
+        </div>
+
+    </header>
+    <div class="header_2">
+        <h1>
+            Refund and Returns Policy
+        </h1>
+    </div>
+    <section>
+        <div class="shop_paragraph">
+            <a href="index.html">
+                <p>Home > </p>
+            </a>
+            <a href="advertisement.html">
+                <p>Shop > </p>
+            </a>
+            <a href="refund and return.html">
+                <p> Refund and Returns Policy</p>
+            </a>
+        </div>
+    </section>
+    <div class="main_section">
+        <h2>
+            Overview
+        </h2>
+
+        <p>
+            Our refund and returns policy lasts 30 days. If 30 days have passed since your purchase, we can’t offer you
+            a full refund or exchange.
+        </p>
+        <p>
+            To be eligible for a return, your item must be unused and in the same condition that you received it. It
+            must also be in the original packaging.
+
+        </p>
+        <p>
+            Several types of goods are exempt from being returned. Perishable goods such as food, flowers, newspapers or
+            magazines cannot be returned. We also do not accept products that are intimate or sanitary goods, hazardous
+            materials, or flammable liquids or gases.
+
+
+        </p>
+        <p>
+            Additional non-returnable items:
+        <ol>
+            Gift cards
+
+        </ol>
+        <ol>
+            Downloadable software products
+
+
+        </ol>
+        <ol>
+            Some health and personal care items
+
+
+        </ol>
+
+        </p>
+        <p>
+            To complete your return, we require a receipt or proof of purchase.
+
+        </p>
+        <p>
+            Please do not send your purchase back to the manufacturer.
+
+
+        </p>
+        <p>
+            There are certain situations where only partial refunds are granted:
+        <ol>
+            Book with obvious signs of use
+
+        </ol>
+        <ol>
+            CD, DVD, VHS tape, software, video game, cassette tape, or vinyl record that has been opened.
+
+
+        </ol>
+        <ol>
+            Any item not in its original condition, is damaged or missing parts for reasons not due to our error.
+
+
+        </ol>
+        <ol>
+            Any item that is returned more than 30 days after delivery
+        </ol>
+
+
+
+        </p>
+        <h2>
+            Refunds
+        </h2>
+        <p>
+            Once your return is received and inspected, we will send you an email to notify you that we have received
+            your returned item. We will also notify you of the approval or rejection of your refund.
+        </p>
+        <p>
+            If you are approved, then your refund will be processed, and a credit will automatically be applied to your
+            credit card or original method of payment, within a certain amount of days.
+        </p>
+        <h4>
+            Late or missing refunds
+
+        </h4>
+        <p>
+            If you haven’t received a refund yet, first check your bank account again.
+
+
+        </p>
+        <p>
+            Then contact your credit card company, it may take some time before your refund is officially posted.
+
+        </p>
+        <p>
+            Next contact your bank. There is often some processing time before a refund is posted.
+
+
+        </p>
+        <p>
+            If you’ve done all of this and you still have not received your refund yet, please contact us at {email
+            address}.
+
+        </p>
+        <h4>
+        Sale items
+        </h4>
+        <p>
+        Only regular priced items may be refunded. Sale items cannot be refunded.
+        </p>
+        <h2>
+            Exchanges
+        </h2>
+        <p>
+            We only replace items if they are defective or damaged. If you need to exchange it for the same item, send us an
+            email at {email address} and send your item to: {physical address}.
+
+        </p>
+        <h2>
+            Gifts
+        </h2>
+        <p>
+            If the item was marked as a gift when purchased and shipped directly to you, you’ll receive a gift credit for
+            the value of your return. Once the returned item is received, a gift certificate will be mailed to you.
+
+        </p>
+        <p>
+            If the item wasn’t marked as a gift when purchased, or the gift giver had the order shipped to themselves to
+        give to you later, we will send a refund to the gift giver and they will find out about your return.
+        </p>
+        <h2>
+            Shipping return
+        </h2>
+        <p>
+        To return your product, you should mail your product to: {physical address}.
+
+        </p>
+        <p>
+            You will be responsible for paying for your own shipping costs for returning your item. Shipping costs are
+        non-refundable. If you receive a refund, the cost of return shipping will be deducted from your refund.
+        </p>
+        <p>
+        Depending on where you live, the time it may take for your exchanged product to reach you may vary.
+
+        </p>
+        <p>
+            If you are returning more expensive items, you may consider using a trackable shipping service or purchasing
+            shipping insurance. We don’t guarantee that we will receive your returned item.
+            To return your product, you should mail your product to: {physical address}.
+        </p>
+        <h2>
+            Need help?
+        </h2>
+        <p>
+            Contact us at {email} for question related to refunds and returns.
+        </p>
+    </div>
+
+        <section>
+            <div class="our_contact">
+                
+                <div class="right_side">
+                    <div class="contact_us">
+                        <h3>Contact Us</h3>
+                        <p>Rains HQ , Jens Olsens Vej 13,8200</p>
+                        <p>Aarhus N, Denmark</p>
+                        <p>Email:dowecoshop@gmail.com</p>
+                        <p>Phone:(+84) 123 456 789</p>
+        
+                        <div class="socialmedia">
+                            <a href="https://www.instagram.com/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/login.php/"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                        
+                        
+                    </div>
+                   
+                    <div class="help_sec">
+                        <h3>Get Helps</h3>
+                        <p>Delivery information</p>
+                        <p>Terms and Condition</p>
+                        <p>Returns and Refunds</p>
+                        <p>Privacy NOtice</p>
+                        <p>Shopping FAQs</p>
+        
+                    </div>
+        
+        
+        
+                </div>
+                <div class="left_side">
+                    <div class="about_us_sec">
+                        <h3>About Us</h3>
+                        <p>Our shops</p>
+                        <p>Contact</p>
+                        <p>Artists</p>
+                        <p>Local Giving</p>
+                        <p>Press</p>
+        
+                    </div>
+                    <div class="customer_care_sec">
+                        <h3>Customer Care</h3>
+                        <p>FAQs</p>
+                        <p>Store Locator</p>
+                        <p>Returns</p>
+                        <p>Shipping information</p>
+                        <p>Wholeshale</p>
+        
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+        <section>
+          <div class="last_icon_sec">
+          <div class="shop">
+              <a href="index.html"> <i class="fa-solid fa-shop"></i></a>
+        
+          </div>
+          <div class="Account">
+              <a href="">
+                  <i class="fa-solid fa-user"></i>
+              </a>
+              
+          </div>
+          <div class="search">
+              <a href="">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+        
+          </div>
+          <div class="wishlist ">
+              <a href="">
+                  <i class="fa-regular fa-heart "></i>
+              </a>
+        
+          </div>
+        </div>
+        </section>
+        
+        
+        
+        
+</body>
+
+</html>
